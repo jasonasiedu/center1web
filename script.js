@@ -86,10 +86,11 @@
 
     // item names + descriptions + image slots column
     const nameX = pad + wL + .0108 * W, thumbW = .148 * W, thumbX = Math.max(.506 * W, nameX + .15 * W);
-    const gapT = .01 * W, slotH = (hL - 2 * gapT) / 3;
+    const gapT = .01 * W, introH = .09 * hL, slotH = (hL - introH - 2 * gapT) / 2;
     Object.assign(items.style, { left: nameX + 'px', top: vTop + 'px', width: (thumbX + thumbW - nameX) + 'px', height: hL + 'px' });
     items.style.setProperty('--thumb-w', thumbW + 'px');
     items.style.setProperty('--slot-h', slotH + 'px');
+    items.style.setProperty('--intro-h', introH + 'px');
     items.style.setProperty('--slot-gap', gapT + 'px');
 
     tx = -(text.offsetLeft + text.offsetWidth + 30);                    // text exits off the left edge
